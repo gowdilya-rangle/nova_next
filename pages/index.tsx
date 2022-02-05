@@ -6,6 +6,7 @@ import { GiCommercialAirplane, GiSuitcase } from "react-icons/gi";
 import { FaRoute, FaWallet, FaConciergeBell, FaSuitcaseRolling } from "react-icons/fa";
 import { GoTasklist } from "react-icons/go";
 import { SiYourtraveldottv } from "react-icons/si";
+import Link from 'next/link';
 
 
 const Home: NextPage = () => {
@@ -45,16 +46,18 @@ const Home: NextPage = () => {
 
         <div className='container mx-auto px-4 text-center'>
           <div className='max-w-md m-auto'>
-        <div className='flex flex-row justify-between'>
-            <section className='w-26 '>
-            <h2 className='font-mono bold text-sm md:text-lg'>
-              Itinerary
-            </h2>
+            <div className='flex flex-row justify-between'>
+            <Link href="/itinerary">
+            <section className='w-26 cursor-pointer'>
+                <h2 className='font-mono bold text-sm md:text-lg'>
+                    Itinerary
+                
+              </h2>
             <div className='bg-slate-300 p-4 rounded-xl'>
               <FaRoute size='4em' />
             </div>
-
-          </section>
+                </section>
+            </Link>
             <section className='w-26 text-center'>
             <h2 className='font-mono bold text-sm md:text-lg'>
               Packing List
